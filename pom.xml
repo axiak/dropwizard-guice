@@ -11,7 +11,7 @@
 
 	<groupId>com.hubspot.dropwizard</groupId>
 	<artifactId>dropwizard-guice</artifactId>
-	<version>0.6.2-SNAPSHOT</version>
+	<version>0.6.1-SNAPSHOT</version>
 	<name>Dropwizard Guice Support</name>
 	<description>Simple library for using Guice DI in a dropwizard service.</description>
 	<url>https://github.com/HubSpot/dropwizard-guice</url>
@@ -42,7 +42,7 @@
 		<dependency>
 			<groupId>com.yammer.dropwizard</groupId>
 			<artifactId>dropwizard-core</artifactId>
-			<version>${project.version}</version>
+			<version>0.6.1</version>
 		</dependency>
 		<dependency>
 			<groupId>com.google.inject.extensions</groupId>
@@ -108,4 +108,30 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
+    <repositories>
+        <repository>
+            <id>sonatype-nexus-snapshots</id>
+            <name>Sonatype Nexus Snapshots</name>
+            <url>http://oss.sonatype.org/content/repositories/snapshots</url>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <id>HubSpot-Releases</id>
+            <url>http://maven.hubteam.com/nexus/content/repositories/releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>HubSpot-Snapshots</id>
+            <url>http://maven.hubteam.com/nexus/content/repositories/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
